@@ -3,26 +3,30 @@ import { Fragment } from 'react';
 import Header from "./Header";
 // import logo from './logo.svg';
 import './App.css';
+import {Link} from 'react-router-dom';
 
 class App extends Component {
+
+  // clickHandler(message) {
+  //   alert(message)
+  // }
+
+  // constructor() 
+  // {
+  //   super();
+  //   this.state = {
+  //     subscribersListToShow: []
+  //   }
+  // }
+
+
   render() {
-    let subscribers = [
-      {
-        id: 1,
-        name: "Vishal Dutt",
-        phone: "8888888888"
-      },
-      {
-        id: 2,
-        name: "Vishal Dutt",
-        phone: "9999999999"
-      }
-    ]
+
     return (
       <Fragment>
         <Header heading="Phone Directory"/>
         <div className="component-body-container">
-          <button className="custom-btn add-btn">Add</button>
+          <Link to="/add"><button className="custom-btn add-btn">Add</button></Link>
 
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
@@ -30,7 +34,7 @@ class App extends Component {
           </div>
 
           {
-            subscribers.map(sub => {
+            this.props.subscribersList.map(sub => {
               return <div key={sub.id} className="grid-container">
               <span className="grid-item">{sub.name}</span>
               <span className="grid-item">{sub.phone}</span>
