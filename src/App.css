@@ -20,7 +20,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 40% 30% auto;
+    grid-template-columns: 40% 25% auto;
     margin-bottom: 10px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     font-size: 1.15rem;
     word-wrap: break-word;
     padding-right: 10px;
@@ -44,6 +44,6 @@
 }
 
 .delete-btn {
-    background: #fa9c9c;
+    background: #fff671;
     color: #ffff;
 }
